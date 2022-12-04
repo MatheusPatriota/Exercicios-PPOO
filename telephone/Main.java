@@ -7,7 +7,7 @@ public class Main {
         PhoneModel model = new PhoneModel();
         Screen screen = new Screen(model);
         KeyPad keyPad = new KeyPad(model);
-
+        model.subscribe(keyPad);
         // Run the program
         keyPad.simulateKeyPresses(NUM_DIGITS);
     }

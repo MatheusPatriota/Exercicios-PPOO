@@ -1,28 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Prints things out to the screen, when needed
  * Printing to the screen:
- *  System.out.println("hello");
+ * System.out.println("hello");
  */
-public class Screen implements ScreenObservable{
+public class Screen {
     private final PhoneModel model;
+
 
     public Screen(PhoneModel model) {
         this.model = model;
     }
 
 
-    @Override
-    public void subscribe(Observer observer) {
-
-    }
-
-    @Override
-    public void unsubscribe(Observer observer) {
-
-    }
-
-    @Override
-    public void publish() {
-
-    }
 }

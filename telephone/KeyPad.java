@@ -20,9 +20,8 @@ public class KeyPad implements Observer{
             model.addDigit(newDigit);
         }
     }
-
     @Override
-    public void update(ScreenObservable observable) {
+    public void update(Object obj) {
 
     }
 }

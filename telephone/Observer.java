@@ -1,4 +1,4 @@
 
 public interface Observer {
-    void update(ScreenObservable observable);
+    void update(Object obj);
 }
