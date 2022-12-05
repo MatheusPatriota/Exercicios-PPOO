@@ -22,8 +22,9 @@ public class WebSearchModel {
         public boolean filter(String query);
     }
 
-// creating variables filters and observers
+    // creating variables filters and observers
     private final List<WebSearchFilter> filters = new ArrayList<>();
+
     public WebSearchModel(File sourceFile) {
         this.sourceFile = sourceFile;
     }
@@ -46,19 +47,29 @@ public class WebSearchModel {
         observers.add(queryObserver);
     }
 
-/*
-*   Altere o modelo de busca para que, quando um observador for registrado, o método
-    de registro também aceita um objeto de filtro de consulta.
-* */
+    /*
+     *   Altere o modelo de busca para que, quando um observador for registrado, o método
+     *    de registro também aceita um objeto de filtro de consulta.
+     */
 
-    public void queryObserverAcceptingFilters(QueryObserver queryObserver, WebSearchFilter webSearchFilter){
+    public void queryObserverAcceptingFilters(QueryObserver queryObserver, WebSearchFilter webSearchFilter) {
         observers.add(queryObserver);
         filters.add(webSearchFilter);
     }
 
+    /**
+     * Altere o modelo de busca para que, para cada consulta (string do arquivo), verifique
+     * se um observador está interessado na consulta antes de notificá-la.
+     */
+
     private void notifyAllObservers(String line) {
-        for (QueryObserver obs : observers) {
-            obs.onQuery(line);
+        // iterar sobre filtros
+        for (int i = 0; i < filters.size(); i++){
+//            check if line is on filter array
+            if(filters.get(i).filter(line)){
+//                if is true get observer and do a query
+                observers.get(i).onQuery(line);
+            }
         }
     }
 }
