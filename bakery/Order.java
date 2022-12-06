@@ -16,4 +16,12 @@ public class Order {
             System.out.printf("   %2d  %s\n", cake.getCost(), cake.getDescription());
         }
     }
+
+    public int getTotal() {
+        int total = 0;
+        for (Cake cake : cakes) {
+            total += cake.getCost();
+        }
+        return total;
+    }
 }
