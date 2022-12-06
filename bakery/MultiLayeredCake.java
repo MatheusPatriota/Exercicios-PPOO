@@ -6,6 +6,9 @@ public class MultiLayeredCake extends Decorator {
     private final int PRICE =5;
 
     public MultiLayeredCake(){}
+    public MultiLayeredCake(Cake cake){
+        super(cake);
+    }
 
     @Override
     public String getDescription() {
