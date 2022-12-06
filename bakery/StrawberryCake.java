@@ -1,4 +1,8 @@
 public class StrawberryCake extends Decorator{
+    /**
+     * Acrescente um novo tipo de bolo: bolo de morango (em inglês, strawberry cake), que
+     * custa o dobro de um bolo padrão.
+     */
     public StrawberryCake(){
         super();
     }
