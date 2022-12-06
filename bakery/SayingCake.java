@@ -17,7 +17,7 @@ public class SayingCake extends Decorator{
 
     @Override
     public String getDescription() {
-        return cake.getDescription() + "with saying '" + this.saying + "' ";
+        return cake.getDescription() + " with saying '" + this.saying + "' ";
     }
 
     @Override
