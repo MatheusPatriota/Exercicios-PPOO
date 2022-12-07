@@ -1,0 +1,189 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "CSV",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_67046 { 
+   	label=CSV
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   CSV67046[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CSV</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   path: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># closeFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># convertFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># extract()</TD></TR>
+<TR><TD ALIGN="LEFT" ># openFile()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_67864 { 
+   	label=DOC
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   DOC67864[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)DOC</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   path: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># closeFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># convertFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># extract()</TD></TR>
+<TR><TD ALIGN="LEFT" ># openFile()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_79058 { 
+   	label=PDF
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   PDF79058[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PDF</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   path: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># closeFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># convertFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># extract()</TD></TR>
+<TR><TD ALIGN="LEFT" ># openFile()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_926364987 { 
+   	label=Document
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Document926364987[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Document</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ analyzeData()</TD></TR>
+<TR><TD ALIGN="LEFT" ># closeFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># convertFile()</TD></TR>
+<TR><TD ALIGN="LEFT" ># extract()</TD></TR>
+<TR><TD ALIGN="LEFT" ># openFile()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ run()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ sendReports()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Document926364987 -> CSV67046[arrowhead=none, arrowtail=empty, dir=both];
+Document926364987 -> DOC67864[arrowhead=none, arrowtail=empty, dir=both];
+Document926364987 -> PDF79058[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
